@@ -56,7 +56,7 @@ namespace Treehouse.FitnessFrog.Controllers
             {
                 _entriesRepository.AddEntry(entry);
 
-                //TODO Display the Entries list page
+                return RedirectToAction("Index");   // this is called the post/redirect/get pattern
             }
             return View(entry);
         }
