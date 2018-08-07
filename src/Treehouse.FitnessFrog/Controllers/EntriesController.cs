@@ -44,6 +44,12 @@ namespace Treehouse.FitnessFrog.Controllers
             return View();
         }
 
+        [ActionName("Add"), HttpPost]  //decorate (label) the code with attributes, attributes provide a way of associating info with our C# code
+        public ActionResult AddPost()
+        {
+            return View();
+        }
+
         public ActionResult Edit(int? id)
         {
             if (id == null)
