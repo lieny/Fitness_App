@@ -44,9 +44,16 @@ namespace Treehouse.FitnessFrog.Controllers
             return View();
         }
 
-        [ActionName("Add"), HttpPost]  //decorate (label) the code with attributes, attributes provide a way of associating info with our C# code
-        public ActionResult AddPost()
+        [HttpPost]  //decorate (label) the code with attributes, attributes provide a way of associating info with our C# code
+        public ActionResult Add(string date, string activityId, string duration, string intensity, string exclude, string notes)
         {
+            ViewBag.Date = date;
+            ViewBag.ActivityId = activityId;
+            ViewBag.Duration = duration;
+            ViewBag.Intensity = intensity;
+            ViewBag.Exclude = exclude;
+            ViewBag.Notes = notes;
+
             return View();
         }
 
